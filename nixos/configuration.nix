@@ -70,7 +70,7 @@
   boot.loader.grub.device = "nodev";
   boot.loader.timeout = 10;
 
-  time.timeZone = "America/New York";
+  time.timeZone = "America/New_York";
 
   networking.hostName = "porphyrion";
 
