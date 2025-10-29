@@ -1,14 +1,14 @@
 {
   services.caddy = {
-    enabled = false;
+    enabled = true;
     virtualHosts."leadreacherai.com".extraConfig = ''
       encode gzip
-      file_server
-      root * ${
-        pkgs.runCommand "testdir" {} ''
-          mkdir "$out"
-          echo hello world > "$out/example.html"
-        ''
+      root * /var/www/html/leadreacherai
+      file_server {
+        hide {
+          .git
+          LICENSE
+        }
       }
     '';
   };
