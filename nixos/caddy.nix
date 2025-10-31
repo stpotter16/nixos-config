@@ -1,14 +1,11 @@
 {
   services.caddy = {
-    enabled = true;
+    enable = true;
     virtualHosts."leadreacherai.com".extraConfig = ''
       encode gzip
       root * /var/www/html/leadreacherai
       file_server {
-        hide {
-          .git
-          LICENSE
-        }
+        hide .git LICENSE
       }
     '';
   };
