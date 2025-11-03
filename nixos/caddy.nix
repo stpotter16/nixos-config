@@ -8,6 +8,13 @@
         hide .git LICENSE
       }
     '';
+    virtualHosts."www.leadreacherai.com".extraConfig = ''
+      encode gzip
+      root * /var/www/html/leadreacherai
+      file_server {
+        hide .git LICENSE
+      }
+    '';
   };
   
   networking.firewall.allowedTCPPorts = [ 80 443 ];
