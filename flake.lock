@@ -7,13 +7,13 @@
         "sqlite-nixpkgs": "sqlite-nixpkgs"
       },
       "locked": {
-        "lastModified": 1764911527,
-        "narHash": "sha256-modCLlyLHhNo4GKQn/tmIcr9KdGhaS7Gs21G5bQM/RA=",
-        "path": "/home/balrog/biodata",
+        "lastModified": 1764920316,
+        "narHash": "sha256-p/eIRmvH8qdfx6Iady70535yTYQjN2zm/E1/Vqkb4Kg=",
+        "path": "/home/balrog/development/biodata",
         "type": "path"
       },
       "original": {
-        "path": "/home/balrog/biodata",
+        "path": "/home/balrog/development/biodata",
         "type": "path"
       }
     },
