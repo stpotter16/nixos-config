@@ -9,7 +9,7 @@
       Restart = "always";
       Type = "simple";
       DynamicUser = "yes";
-      WorkingDirectory = "/var/lib/biodata";
+      StateDirectory = "biodata";
     };
 
     environment = {
