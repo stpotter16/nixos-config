@@ -5,7 +5,7 @@
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
 
-    biodata.url = "path:/home/balrog/biodata";
+    biodata.url = "path:/home/balrog/development/biodata";
   };
 
   outputs = {
