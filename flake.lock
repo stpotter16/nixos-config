@@ -7,8 +7,8 @@
         "sqlite-nixpkgs": "sqlite-nixpkgs"
       },
       "locked": {
-        "lastModified": 1764910097,
-        "narHash": "sha256-g6i7FVSODn2HEiqt9teEu5Hq3Xb5gB3qp+VrSzkYKoE=",
+        "lastModified": 1764911527,
+        "narHash": "sha256-modCLlyLHhNo4GKQn/tmIcr9KdGhaS7Gs21G5bQM/RA=",
         "path": "/home/balrog/biodata",
         "type": "path"
       },

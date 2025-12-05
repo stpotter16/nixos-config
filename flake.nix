@@ -23,7 +23,10 @@
       porphyrion = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         # > Our main nixos configuration file <
-        modules = [./nixos/configuration.nix biodata.nixosModules.default];
+        modules = [
+          ./nixos/configuration.nix
+          biodata.nixosModules.default
+        ];
       };
     };
   };
