@@ -9,7 +9,6 @@
   outputs = {
     self,
     nixpkgs,
-    biodata,
     home-manager,
     ...
   } @ inputs: let
