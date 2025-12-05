@@ -4,8 +4,6 @@
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
-
-    biodata.url = "path:/home/balrog/development/biodata";
   };
 
   outputs = {
@@ -25,7 +23,6 @@
         # > Our main nixos configuration file <
         modules = [
           ./nixos/configuration.nix
-          biodata.nixosModules.default
         ];
       };
     };

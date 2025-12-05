@@ -17,6 +17,9 @@
 
     # Caddy is special
     ./caddy.nix
+
+    # Biodata
+    ./biodata.nix
   ];
 
   nixpkgs = {
@@ -103,10 +106,6 @@
   services.longview = {
     enable = true;
     apiKeyFile = "/var/lib/longview/apiKeyFile";
-  };
-  services.biodata = {
-    enable = true;
-    port = 8080;
   };
 
   # Open ports in the firewall.
