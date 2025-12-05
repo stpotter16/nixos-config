@@ -52,6 +52,7 @@
       flake-registry = "";
       # Workaround for https://github.com/NixOS/nix/issues/9574
       nix-path = config.nix.nixPath;
+      trusted-users = [ "balrog" ];
     };
     # Opinionated: disable channels
     channel.enable = false;
@@ -87,6 +88,7 @@
     openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBi71RhXw+0mF1wozcxAE0EL7pxj1qmkhrPAmHRUX4Vn spotter1642@gmail.com" ];
     extraGroups = [ "wheel" "networkmanager" ];
   };
+
 
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
