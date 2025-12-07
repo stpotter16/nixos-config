@@ -10,6 +10,7 @@
       Type = "simple";
       DynamicUser = "yes";
       StateDirectory = "biodata";
+      EnvironmentFile = "/var/lib/biodata/secrets.env";
     };
 
     environment = {
