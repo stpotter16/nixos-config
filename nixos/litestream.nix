@@ -22,7 +22,7 @@
                access-key-id = "${BIOTRAK_LITESTREAM_ACCESS_KEY_ID}";
                secret-access-key = "${BIOTRAK_LITESTREAM_SECRET_ACCESS_KEY}";
              }
-           ]
+           ];
          }
        ];
     };  
