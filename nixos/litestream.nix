@@ -11,8 +11,8 @@
            replicas = [
              {
                type = "s3";
-               bucket: "${BIOTRAKE_LITESTREAM_BUCKET}";
-               path: "db";
+               bucket = "${BIOTRAKE_LITESTREAM_BUCKET}";
+               path = "db";
                endpoint = "${BIOTRAK_LITESTREAM_ENDPOINT}";
                force-path-style = true;
                retention = "168h";
