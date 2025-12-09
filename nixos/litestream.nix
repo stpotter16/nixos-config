@@ -1,6 +1,6 @@
 {
   services.litestream = {
-    enabled = true;
+    enable = true;
     environmentFile = "/run/secrets/litestream";
   };
 }
