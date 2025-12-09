@@ -18,6 +18,9 @@
     # Caddy is special
     ./caddy.nix
 
+    # Litestream
+    ./litestream.nix
+
     # Biodata
     ./biodata.nix
   ];

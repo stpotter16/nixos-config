@@ -15,6 +15,9 @@
         hide .git LICENSE
       }
     '';
+    virtualHosts."biotrak.app".extraConfig = ''
+      reverse_proxy :8080
+    '';
   };
   
   networking.firewall.allowedTCPPorts = [ 80 443 ];
