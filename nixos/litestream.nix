@@ -11,7 +11,7 @@
               type = "s3";
               bucket = "biotrak";
               path = "db";
-              endpoint = "TODO";
+              endpoint = "s3.us-east-005.backblazeb2.com";
               force-path-style = true;
               retention = "168h";
               snapshot-interval = "24h";
