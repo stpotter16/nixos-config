@@ -1,4 +1,8 @@
 {
+  systemd.services.litestream.serviceConfig = {
+    SupplementaryGroups = [ "biodata" ];
+  };
+
   services.litestream = {
     enable = true;
     environmentFile = "/run/secrets/litestream";

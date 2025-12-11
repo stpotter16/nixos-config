@@ -1,5 +1,7 @@
 { pkgs, ...}:
-{ 
+{
+  users.groups.biodata = {};
+
   systemd.services.biodata = {
     description = "Biodata web service";
     wantedBy = [ "multi-user.target" ];
@@ -10,6 +12,7 @@
       Restart = "always";
       Type = "simple";
       DynamicUser = "yes";
+      Group = "biodata";
       StateDirectory = "biodata";
       EnvironmentFile = "/var/lib/biodata/secrets.env";
       ExecStartPost =
