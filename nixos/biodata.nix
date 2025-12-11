@@ -12,7 +12,7 @@
       DynamicUser = "yes";
       StateDirectory = "biodata";
       EnvironmentFile = "/var/lib/biodata/secrets.env";
-      ExecPostStart =
+      ExecStartPost =
       "+"
       + pkgs.writeShellScript "grant-db-permissions" ''
           timeout=10
