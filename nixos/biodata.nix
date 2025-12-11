@@ -1,3 +1,4 @@
+{ pkgs, ...}:
 { 
   systemd.services.biodata = {
     description = "Biodata web service";
@@ -11,6 +12,24 @@
       DynamicUser = "yes";
       StateDirectory = "biodata";
       EnvironmentFile = "/var/lib/biodata/secrets.env";
+      ExecPostStart =
+      "+"
+      + pkgs.writeShellScript "grant-db-permissions" ''
+          timeout=10
+
+          while [ ! -f /var/lib/biodata ];
+          do
+            if [ "$timeout" == 0 ]; then
+              echo "ERROR: Timeout while waiting for /var/lib/biodata to exist"
+              exit 1
+            fi
+
+            ((timeout--))
+          done
+
+          find /var/lib/biodata -type d -exec chmod -v 775 {} \;
+          find /var/lib/biodata -type f -exec chmod -v 660 {} \;
+      '';
     };
 
     environment = {
