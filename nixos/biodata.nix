@@ -17,7 +17,7 @@
       + pkgs.writeShellScript "grant-db-permissions" ''
           timeout=10
 
-          while [ ! -f /var/lib/biodata ];
+          while [ ! -d /var/lib/biodata ];
           do
             if [ "$timeout" == 0 ]; then
               echo "ERROR: Timeout while waiting for /var/lib/biodata to exist"
