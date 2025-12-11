@@ -24,6 +24,7 @@
               exit 1
             fi
 
+            sleep 1
             ((timeout--))
           done
 
