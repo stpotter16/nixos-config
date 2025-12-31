@@ -18,6 +18,9 @@
     virtualHosts."biotrak.app".extraConfig = ''
       reverse_proxy :8080
     '';
+    virtualHosts."biodata.stpotter.dev".extraConfig = ''
+      reverse_proxy :8080
+    '';
   };
   
   networking.firewall.allowedTCPPorts = [ 80 443 ];
