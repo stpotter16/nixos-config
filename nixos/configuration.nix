@@ -108,6 +108,9 @@
     settings.PermitRootLogin = "no";
     settings.PasswordAuthentication = false;
   };
+  services.fail2ban = {
+    enable = true;
+  };
   services.longview = {
     enable = true;
     apiKeyFile = "/var/lib/longview/apiKeyFile";
