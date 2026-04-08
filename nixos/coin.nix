@@ -25,7 +25,7 @@
 
     environment = {
         PORT = "8088";
-        BIODATA_DB_PATH = "/var/lib/coin";
+        COIN_DB_PATH = "/var/lib/coin";
     };
   };
 }
