@@ -23,6 +23,9 @@
 
     # Biodata
     ./biodata.nix
+
+    # Coin
+    ./coin.nix
   ];
 
   nixpkgs = {
