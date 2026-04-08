@@ -23,6 +23,10 @@
       encode zstd gzip
       reverse_proxy :8080
     '';
+    virtualHosts."coin.stpotter.dev".extraConfig = ''
+      encode zstd gzip
+      reverse_proxy :8088
+    '';
   };
   
   networking.firewall.allowedTCPPorts = [ 80 443 ];
