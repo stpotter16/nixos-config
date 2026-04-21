@@ -104,7 +104,12 @@
     mtr
     sysstat
   ];
-
+  
+  # Enable the embeder service
+  services.embeder = {
+    enable = true;
+    offlineMode = false;
+  };
   # Enable the OpenSSH daemon.
   services.openssh = {
     enable = true;

@@ -4,11 +4,13 @@
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    embeder.url = "path:/home/balrog/embeder";
   };
 
   outputs = {
     self,
     nixpkgs,
+    embeder,
     home-manager,
     ...
   } @ inputs: let
@@ -22,6 +24,7 @@
         # > Our main nixos configuration file <
         modules = [
           ./nixos/configuration.nix
+          embeder.nixosModules.default
         ];
       };
     };
