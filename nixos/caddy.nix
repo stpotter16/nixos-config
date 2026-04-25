@@ -27,6 +27,26 @@
       encode zstd gzip
       reverse_proxy :8088
     '';
+    virtualHosts."e.stpotter.dev".extraConfig = ''
+      handle /static/* {
+        reverse_proxy https://us-assets.i.posthog.com:443 {
+          header_up Host us-assets.i.posthog.com
+          header_down -Access-Control-Allow-Origin
+        }
+      }
+      handle /array/* {
+        reverse_proxy https://us-assets.i.posthog.com:443 {
+          header_up Host us-assets.i.posthog.com
+          header_down -Access-Control-Allow-Origin
+        }
+      }
+      handle {
+        reverse_proxy https://us.i.posthog.com:443 {
+          header_up Host us.i.posthog.com
+          header_down -Access-Control-Allow-Origin
+        }
+      }
+    '';
   };
   
   networking.firewall.allowedTCPPorts = [ 80 443 ];
